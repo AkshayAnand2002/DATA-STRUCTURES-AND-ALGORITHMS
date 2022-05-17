@@ -12,6 +12,31 @@ Check whether queue is empty or not means front == NULL.
 If it is empty then display Queue is empty. If queue is not empty then step 3
 Check if (front==rear) if it is true then set front = rear = NULL else move the front forward in queue, update address of front in rear node and return the element.
 */
+/*Algorithm for Insertion and deletion operation using linked list in a circular queue
+Algorithm_Enqueue---
+if (FRONT == NULL)    //  Inserting in an Empty Queue
+FRONT = REAR = newNode
+end ifelse    
+REAR -> next = newNode   //  Inserting after the last element
+REAR = newNode 
+end else
+REAR -> next = FRONT
+end Algorithm_Enqueue
+--------------------------------------------------------------------------------------
+Algorithm_Dequeue---
+if(FRONT == NULL) //  Condition for underflow
+Print “Queue Underflow”
+end Dequeue
+end ifelse if(FRONT == REAR) // The queue contains only one node
+temp = FRONT -> data
+free(temp)
+FRONT = FRONT -> next
+REAR -> next = FRONT
+end ifelse if (FRONT == N - 1)  // If FRONT is the last node
+front = 0   // Make FRONT as the first node
+end if
+end Dequeue
+*/
 #include<stdio.h>
 #include<stdlib.h>
 struct node
