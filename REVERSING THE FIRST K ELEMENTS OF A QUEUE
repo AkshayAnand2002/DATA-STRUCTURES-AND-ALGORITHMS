@@ -1,0 +1,6 @@
+REVERSING THE FIRST K ELEMENTS OF A QUEUE--
+The idea is to use an auxiliary stack. 
+Create an empty stack.
+One by one dequeue first K items from given queue and push the dequeued items to stack.
+Enqueue the contents of stack at the back of the queue
+Dequeue (size-k) elements from the front and enqueue them one by one to the same queue.
