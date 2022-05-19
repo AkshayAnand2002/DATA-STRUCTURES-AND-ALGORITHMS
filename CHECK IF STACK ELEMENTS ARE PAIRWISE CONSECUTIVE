@@ -1,0 +1,7 @@
+TO CHECK IF STACK ELEMENTS ARE PAIRWISE CONSECUTIVE.
+The idea is to use another stack. 
+Create an auxiliary stack aux.
+Transfer contents of given stack to aux.
+While traversing fetch top two elements from aux stack , check if they are consecutive or not. After checking put these elements back to original stack.
+Continue this process for all aux stack elements till size of aux stack > 1.
+Return Result is TRUE OR FALSE.
