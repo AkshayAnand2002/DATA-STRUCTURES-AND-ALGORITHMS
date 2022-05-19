@@ -1,0 +1,8 @@
+CHECK IF QUEUE ELEMENTS ARE PAIRWISE CONSECUTIVE
+Using two stacks :
+Transfer all elements of the queue to one auxiliary stack aux.
+Now, transfer the elements from this stack to another auxiliary stack aux2.
+Start popping two elements from aux2 and then check the difference between these two elements.
+If their difference is 1, continue for other pairs till one element is left in the stack.
+Also, after popping, push them to queue simultaneously to maintain the original queue.
+Finally, if there is any pair with a difference not equal to 1, return false, else return true.
