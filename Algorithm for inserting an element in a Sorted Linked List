@@ -1,0 +1,6 @@
+Implementation for inserting an element in a Sorted Linked List:-
+STEP 1:- When Linked list is empty then make the node as head and return it to the linked list.
+STEP 2:- When data or value of the node to be inserted is smaller than the value of head node, then insert the node at the start and make it head of the linked list.
+STEP 3:- Make operations to find the correct node after which the input node is to be inserted in the linked list.
+STEP 4:- To find the correct node start from head, keep traversing until we reach a node whose value is larger or greater than the input node. The node just before the node is the correct node.
+STEP 5:- Lets insert the node after the correct node as we done in Step 4.
