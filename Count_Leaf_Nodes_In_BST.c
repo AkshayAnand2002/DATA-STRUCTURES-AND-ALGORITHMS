@@ -1,3 +1,10 @@
+/*
+getLeafCount(node)
+1) If node is NULL then return 0.
+2) Else If left and right child nodes are NULL return 1.
+3) Else recursively calculate leaf count of the tree using below formula.
+    Leaf count of a tree = Leaf count of left subtree + Leaf count of right subtree
+*/
 // C implementation to find leaf count of a given Binary tree
 #include <stdio.h>
 #include <stdlib.h>
