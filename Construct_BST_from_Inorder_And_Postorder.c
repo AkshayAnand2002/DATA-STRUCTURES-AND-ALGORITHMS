@@ -1,3 +1,7 @@
+/*The idea is to start with the root node, which would be the last item in the postorder sequence, and find the boundary of its left
+and right subtree in the inorder sequence. To find the boundary, search for the index of the root node in the inorder sequence. 
+All keys before the root node in the inorder sequence become part of the left subtree, and all keys after the root node become part of the right subtree. 
+Repeat this recursively for all nodes in the tree and construct the tree in the process.*/
 #include <stdio.h>
 #include <stdlib.h>
  
@@ -115,3 +119,11 @@ int main(void)
  
     return 0;
 }
+/*
+Download  Run Code
+
+Output:
+
+Inorder traversal is 4 2 1 7 5 8 3 6
+Postorder traversal is 4 2 7 8 5 6 3 1
+*/
