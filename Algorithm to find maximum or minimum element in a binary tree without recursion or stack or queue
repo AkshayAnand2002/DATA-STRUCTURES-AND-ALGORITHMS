@@ -1,0 +1,11 @@
+1. Initialize current as root 
+2. Take to variable max and min 
+3. While current is not NULL 
+If the current does not have left child 
+Update variable max and min with current’s data if required
+Go to the right, i.e., current = current->right
+Else 
+Make current as the right child of the rightmost 
+node in current’s left subtree
+Go to this left child, i.e., current = current->left.
+So using max and min we traverse the tree to update values of max and min.
