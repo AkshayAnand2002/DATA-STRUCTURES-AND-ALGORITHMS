@@ -1,0 +1,10 @@
+Algorithm to Find Maximum Level sum in Binary Tree
+The idea is to do a level order traversal and for each level calculate the sum of all the nodes of that level. 
+If the sum is greater than maximum sum, update the maximum sum.
+1)Create a queue, and push the root node to the queue. Initialize a variable maxSum as negative infinity.
+2)While the queue is not empty repeat step 3 and 4.
+3)At this moment one level is present in the queue. Initialize a variable named size as the size of queue and a variable sum as 0.
+4)Run a loop from i = 0 to size, and at each iteration pop out an element from the queue.
+  Add the value of this element to variable sum and push the children of popped out node to the queue. 
+  At the end of the loop if sum is greater than maxSum, update maxSum as sum.
+5)Return maxSum.
