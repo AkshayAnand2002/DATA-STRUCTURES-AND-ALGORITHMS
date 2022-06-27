@@ -1,0 +1,51 @@
+Left-Left case: 
+
+Here, the new node would have been inserted on the left to the left child of the current node. So, if our bf has a value greater than 1, and the new node has data less than the data of the left child of the node itself, it is the case of left-left rotation, and hence we call the rightRotate function once to fix this disturbance. 
+
+
+Right-Right case: 
+
+Here, the new node would have been inserted on the right to the right child of the current node. So, if our bf has a value less than -1, and the new node has data greater than the data of the right child of the node itself, it is the case of right-right rotation, and hence we call the leftRotate function once to fix this disturbance. 
+
+Left-Right case: 
+
+Here, the new node would have been inserted on the right to the left child of the current node. So, if our bf has a value greater than 1, and the new node has data greater than the data of the left child of the node itself, it is the case of left-right rotation, and hence we call first the leftRotate function passing the left subtree and then call the rightRotate function on this updated node to fix this disturbance. 
+
+Right-Left case: 
+
+Here, the new node would have been inserted on the left to the right child of the current node. So, if our bf has a value less than -1, and the new node has data less than the data of the right child of the node itself, it is the case of right-left rotation, and hence we call first the rightRotate function passing the right subtree and then call the leftRotate function on this updated node to fix this disturbance. 
+
+And then finally return this node. 
+
+struct Node *insert(struct Node* node, int key){
+    if (node == NULL)
+        return  createNode(key);
+ 
+    if (key < node->key)
+        node->left  = insert(node->left, key);
+    else if (key > node->key)
+        node->right = insert(node->right, key);
+ 
+    node->height = 1 + max(getHeight(node->left), getHeight(node->right));
+    int bf = getBalanceFactor(node);
+ 
+    // Left Left Case
+        if(bf>1 && key < node->left->key){
+            return rightRotate(node);
+        }
+    // Right Right Case
+        if(bf<-1 && key > node->right->key){
+            return leftRotate(node);
+        }
+    // Left Right Case
+    if(bf>1 && key > node->left->key){
+            node->left = leftRotate(node->left);
+            return rightRotate(node);
+        }
+    // Right Left Case
+    if(bf<-1 && key < node->right->key){
+            node->right = rightRotate(node->right);
+            return leftRotate(node);
+        }
+    return node;
+}
