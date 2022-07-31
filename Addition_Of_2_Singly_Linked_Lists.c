@@ -1,7 +1,12 @@
 /*
 1)Reverse the two number lists.
-2)Simulate addition on nodes one by one. Append each node before the already calculated sum nodes.( You will better understand this step in code)
+2)Simulate addition on nodes one by one. Append each node before the already calculated sum nodes.
 3)In the end we will get the final answer and we can return the head node.
+--------------------------------------------------------------------------------------------------
+In this approach we simulate how in reality we add two numbers. In the code we have taken 9->8->7 and 1->2->3 as two numbers to add. 
+What we do is reverse these two lists to get 7->8->9 and 3->2->1 and start from the head of the lists to add numbers of individual nodes like 
+we would in practice if we add two numbers.
+For example,  first we add 7 and 3 to get 10, which means carry = 1 and value of new node will be 0. Now we continue this till the end of the list.
 */
 #include <stdio.h>
 #include <stdlib.h>
